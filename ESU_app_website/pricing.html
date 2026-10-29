@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing — PayRight</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M8 4h24a2 2 0 0 1 2 2v30l-4-3-4 3-4-3-4 3-4-3-4 3-4-3V6a2 2 0 0 1 2-2z' fill='%2316142A'/%3E%3Cpath d='M13 19.5l5 5 9.5-10' stroke='%236D4BFF' stroke-width='3.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+  <script>try{var t=localStorage.getItem('pr-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<header id="nav"></header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="kicker" data-reveal>Pricing</span>
+    <h1 class="display h-xl split-words">Pay for PayRight <span class="ital">only</span> if it pays you back.</h1>
+    <p class="lead" data-reveal>The core audit is free forever. Plus is for people who scan often and want the full picture.</p>
+  </div>
+</section>
+
+<section style="padding-bottom:100px">
+  <div class="wrap">
+    <div class="price-toggle" data-reveal>
+      <button class="on" data-cycle="m">Monthly</button>
+      <button data-cycle="y">Yearly · save more</button>
+    </div>
+    <div class="plans">
+      <div class="plan" data-reveal>
+        <span class="pname">Free</span>
+        <span class="muted">For trying PayRight on everyday bills.</span>
+        <div class="pprice">₹0</div><span class="muted">forever</span>
+        <ul>
+          <li>10 bill scans a month</li><li>Basic audit report</li><li>Equal &amp; item-wise splitting</li>
+          <li>3 months of bill history</li><li>Consumer rights hub</li>
+          <li class="no">Exports &amp; detailed analytics</li>
+        </ul>
+        <a href="login.html?mode=signup" class="btn btn-ghost">Start free</a>
+      </div>
+      <div class="plan hot" data-reveal style="--d:.1s">
+        <span class="ribbon">Most popular</span>
+        <span class="pname">PayRight Plus</span>
+        <span class="muted">For frequent diners, flatmates and families.</span>
+        <div class="pprice" id="plusPrice">₹79<small>/month</small></div><span class="muted" id="plusNote">Billed monthly · cancel anytime</span>
+        <ul>
+          <li>Unlimited fair-use scans</li><li>Advanced audit reports</li><li>Detailed spending analytics</li>
+          <li>Unlimited history &amp; PDF exports</li><li>Advanced groups &amp; settle-up</li><li>Price comparisons</li>
+        </ul>
+        <button class="btn" id="plusBtn">Get PayRight Plus</button>
+      </div>
+      <div class="plan" data-reveal style="--d:.2s">
+        <span class="pname">Business / API</span>
+        <span class="muted">For fintechs, expense tools and banks.</span>
+        <div class="pprice" style="font-size:44px">Coming later</div><span class="muted">future roadmap</span>
+        <ul>
+          <li>Bill-audit API</li><li>Per-bill processing</li><li>Expense platform integrations</li>
+          <li>Privacy-first by design</li><li class="no">Available today</li>
+        </ul>
+        <a href="about.html#contact" class="btn btn-ghost">Register interest</a>
+      </div>
+    </div>
+
+    <div style="margin-top:110px">
+      <span class="kicker" data-reveal>Side by side</span>
+      <h2 class="display h-l split-words" style="margin:16px 0 10px">Compare plans.</h2>
+      <div class="table-wrap" data-reveal>
+        <table class="cmp-table">
+          <tr><th>Feature</th><th>Free</th><th>Plus</th></tr>
+          <tr><td>Bill scans per month</td><td>10</td><td>Unlimited*</td></tr>
+          <tr><td>Arithmetic verification</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Charge explanations with sources</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Ask PayRight questions</td><td>5 / month</td><td>Unlimited*</td></tr>
+          <tr><td>Bill splitting &amp; groups</td><td>Up to 2 groups</td><td>Unlimited</td></tr>
+          <tr><td>Bill history</td><td>3 months</td><td>Unlimited</td></tr>
+          <tr><td>PDF &amp; CSV exports</td><td>–</td><td>✓</td></tr>
+          <tr><td>Spending insights</td><td>Basic</td><td>Detailed</td></tr>
+          <tr><td>Complaint tracker</td><td>✓</td><td>✓ + evidence bundles</td></tr>
+        </table>
+      </div>
+      <p class="muted" style="font-size:14px;margin-top:14px">*Fair-use limits apply.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker" data-reveal>FAQ</span>
+      <h2 class="display h-l split-words">Questions, answered.</h2>
+    </div>
+    <div class="acc">
+      <div class="acc-item" data-reveal><button class="acc-q">Does PayRight tell me a charge is illegal?<span class="pm">+</span></button>
+        <div class="acc-a"><div><div class="inner"><p>No. PayRight separates arithmetic facts from rule-based guidance. We'll say a fee is “optional under a verified rule” or “unexplained” — never “illegal” just because it looks unusual.</p></div></div></div></div>
+      <div class="acc-item" data-reveal><button class="acc-q">Is my receipt data private?<span class="pm">+</span></button>
+        <div class="acc-a"><div><div class="inner"><p>Yes. Receipts are stored privately in your account and are never shown on public merchant pages. We don't sell personal receipt or complaint data.</p></div></div></div></div>
+      <div class="acc-item" data-reveal><button class="acc-q">Does PayRight move money when I settle up?<span class="pm">+</span></button>
+        <div class="acc-a"><div><div class="inner"><p>No. Settlements are recorded by you. Where supported, we can open your UPI app with the amount filled in — the payment itself happens in your UPI app.</p></div></div></div></div>
+      <div class="acc-item" data-reveal><button class="acc-q">Which bills work best?<span class="pm">+</span></button>
+        <div class="acc-a"><div><div class="inner"><p>Restaurant and café bills are our most complete category today. Grocery, delivery, hotel and hospital bills are on the roadmap and will be labelled clearly until their rules are fully tested.</p></div></div></div></div>
+      <div class="acc-item" data-reveal><button class="acc-q">Can I cancel Plus anytime?<span class="pm">+</span></button>
+        <div class="acc-a"><div><div class="inner"><p>Yes. You keep Plus until the end of your billing period and your saved bills stay with you on the Free plan.</p></div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="modal" id="checkout" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <span class="tag plain">Early access · ₹0 today</span>
+    <h3 style="margin-top:14px">PayRight Plus</h3>
+    <p class="muted" id="coLine">₹79 / month</p>
+    <div style="margin-top:22px">
+      <div class="field"><label>Email</label><input type="email" id="coEmail" placeholder="you@example.com"><span class="err">Please enter a valid email.</span></div>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn btn-primary" id="coGo">Start PayRight Plus</button>
+      <button class="btn btn-ghost" data-close>Cancel</button>
+    </div>
+  </div>
+</div>
+
+<footer id="foot"></footer>
+
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="assets/site.js"></script>
+<script>
+  // Prices live in one config object so they're easy to change.
+  const PRICING = { plus: { m: 79, y: 749 } };
+  let cycle = "m";
+  document.querySelectorAll("[data-cycle]").forEach(b => b.onclick = () => {
+    document.querySelectorAll("[data-cycle]").forEach(x => x.classList.remove("on"));
+    b.classList.add("on"); cycle = b.dataset.cycle;
+    const el = document.getElementById("plusPrice");
+    el.style.opacity = 0;
+    setTimeout(() => {
+      el.innerHTML = "₹" + PRICING.plus[cycle] + "<small>/" + (cycle === "m" ? "month" : "year") + "</small>";
+      document.getElementById("plusNote").textContent = cycle === "m" ? "Billed monthly · cancel anytime" : "About ₹62/month · billed yearly";
+      el.style.opacity = 1;
+    }, 180);
+  });
+  document.getElementById("plusPrice").style.transition = "opacity .2s";
+  const co = document.getElementById("checkout");
+  document.getElementById("plusBtn").onclick = () => {
+    document.getElementById("coLine").textContent = "₹" + PRICING.plus[cycle] + " / " + (cycle === "m" ? "month" : "year");
+    co.classList.add("open");
+  };
+  co.querySelector("[data-close]").onclick = () => co.classList.remove("open");
+  co.onclick = e => { if (e.target === co) co.classList.remove("open"); };
+  document.getElementById("coGo").onclick = () => {
+    const f = document.getElementById("coEmail");
+    const ok = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.value);
+    f.parentElement.classList.toggle("bad", !ok);
+    if (!ok) return;
+    co.classList.remove("open");
+    toast("Welcome to PayRight Plus!");
+  };
+</script>
+</body>
+</html>

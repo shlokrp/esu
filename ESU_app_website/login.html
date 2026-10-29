@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in — PayRight</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M8 4h24a2 2 0 0 1 2 2v30l-4-3-4 3-4-3-4 3-4-3-4 3-4-3V6a2 2 0 0 1 2-2z' fill='%2316142A'/%3E%3Cpath d='M13 19.5l5 5 9.5-10' stroke='%236D4BFF' stroke-width='3.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+  <script>try{var t=localStorage.getItem('pr-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<div class="auth">
+  <div class="auth-art">
+    <div class="ring"></div>
+    <a href="index.html" class="logo" style="color:var(--bg)">
+      <svg viewBox="0 0 40 40" style="width:34px;height:34px"><path d="M8 4h24a2 2 0 0 1 2 2v30l-4-3-4 3-4-3-4 3-4-3-4 3-4-3V6a2 2 0 0 1 2-2z" fill="var(--bg)"/><path d="M13 19.5l5 5 9.5-10" stroke="var(--accent)" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Pay<b>Right</b></span>
+    </a>
+    <div style="position:relative">
+      <h2 class="display h-l split-words">Scan before you pay.</h2>
+      <p style="opacity:.7;margin-top:16px;font-size:19px" data-reveal>Know what every rupee is for.</p>
+    </div>
+  </div>
+
+  <div class="auth-form">
+    <a href="index.html" class="muted" style="font-size:15px;margin-bottom:40px">← Back to website</a>
+    <h1 class="display h-l" id="title">Welcome back.</h1>
+    <p class="muted" id="sub" style="margin-bottom:30px">Log in to see your bills, groups and complaints.</p>
+    <form id="authForm" novalidate>
+      <div class="field" id="nameField" style="display:none"><label for="an">Full name</label><input id="an" autocomplete="name"><span class="err">Please enter your name.</span></div>
+      <div class="field"><label for="ae">Email</label><input id="ae" type="email" autocomplete="email"><span class="err">Please enter a valid email.</span></div>
+      <div class="field"><label for="ap">Password</label><input id="ap" type="password" autocomplete="current-password"><span class="err">At least 8 characters.</span></div>
+      <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center" id="submitBtn">Log in <span class="arr">→</span></button>
+    </form>
+    <div class="or">or</div>
+    <a href="#" data-app="" class="btn btn-ghost" style="width:100%;justify-content:center">Continue as guest</a>
+    <p class="muted" style="margin-top:26px;font-size:15px" id="switchLine">New to PayRight? <a href="#" id="switchMode" style="color:var(--accent);font-weight:700">Create an account</a></p>
+    <p class="muted" style="margin-top:6px;font-size:15px"><a href="#" id="forgot" style="text-decoration:underline">Forgot password?</a></p>
+  </div>
+</div>
+
+<script src="assets/site.js"></script>
+<script>
+  let signup = new URLSearchParams(location.search).get("mode") === "signup";
+  function render() {
+    document.getElementById("title").textContent = signup ? "Create your account." : "Welcome back.";
+    document.getElementById("sub").textContent = signup ? "Free forever. Your first audit takes under a minute." : "Log in to see your bills, groups and complaints.";
+    document.getElementById("nameField").style.display = signup ? "" : "none";
+    document.getElementById("submitBtn").innerHTML = (signup ? "Create account" : "Log in") + ' <span class="arr">→</span>';
+    document.getElementById("switchLine").innerHTML = signup
+      ? 'Already have an account? <a href="#" id="switchMode" style="color:var(--accent);font-weight:700">Log in</a>'
+      : 'New to PayRight? <a href="#" id="switchMode" style="color:var(--accent);font-weight:700">Create an account</a>';
+    document.getElementById("switchMode").onclick = e => { e.preventDefault(); signup = !signup; render(); };
+  }
+  render();
+  document.getElementById("forgot").onclick = e => { e.preventDefault(); toast("If an account exists for that email, a reset link is on its way."); };
+  document.getElementById("authForm").addEventListener("submit", e => {
+    e.preventDefault();
+    const checks = [["ae", v => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)], ["ap", v => v.length >= 8]];
+    if (signup) checks.unshift(["an", v => v.trim().length > 1]);
+    let ok = true;
+    checks.forEach(([id, t]) => { const el = document.getElementById(id); const g = t(el.value); el.parentElement.classList.toggle("bad", !g); ok = ok && g; });
+    if (!ok) return;
+    const name = signup ? document.getElementById("an").value.trim().split(" ")[0] : "";
+    try { if (name) localStorage.setItem("pr-name", name); } catch (err) {}
+    toast(signup ? "Account created — opening the app" : "Logged in — opening the app");
+    setTimeout(() => location.href = appLink("#home"), 900);
+  });
+</script>
+</body>
+</html>

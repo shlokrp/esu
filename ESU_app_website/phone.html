@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open PayRight on your phone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Manrope:wght@500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #0D0C18; --ink: #F3EFE6; --muted: #9a95b2; --accent: #9B83FF; --card: #18162C; --line: #2B2845; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--ink); font-family: Manrope, system-ui, sans-serif; min-height: 100vh; display: grid; place-items: center; padding: 30px 16px; }
+    .wrap { display: grid; grid-template-columns: auto 1fr; gap: 60px; align-items: center; max-width: 1000px; }
+    h1 { font-family: "Bricolage Grotesque", sans-serif; font-size: clamp(40px, 6vw, 76px); letter-spacing: -.045em; line-height: .95; }
+    h1 i { color: var(--accent); font-weight: 700; }
+    .qr { background: #fff; padding: 22px; border-radius: 28px; }
+    .qr img, .qr canvas { display: block; width: 280px; height: 280px; }
+    ol { margin: 28px 0 0 20px; font-size: 18px; line-height: 1.6; color: #d6d1e6; }
+    ol li { padding: 6px 0; }
+    .url { font-family: "JetBrains Mono", monospace; font-size: 18px; background: var(--card); border: 1px solid var(--line); padding: 12px 16px; border-radius: 14px; margin-top: 24px; display: inline-block; word-break: break-all; }
+    .btns { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
+    a.btn { padding: 14px 22px; border-radius: 99px; font-weight: 700; text-decoration: none; }
+    .pri { background: var(--accent); color: #fff; }
+    .ghost { border: 1.5px solid var(--line); color: var(--ink); }
+    .note { color: var(--muted); font-size: 14px; margin-top: 18px; max-width: 52ch; }
+    .warn { background: #3A2B12; color: #F2B65A; padding: 14px 18px; border-radius: 14px; margin-top: 20px; font-weight: 700; display: none; }
+    @media (max-width: 760px) { .wrap { grid-template-columns: 1fr; gap: 30px; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="qr" id="qr"></div>
+    <div>
+      <h1>Scan to open<br><i>PayRight</i> on your phone.</h1>
+      <div class="url" id="url"></div>
+      <ol>
+        <li>Connect your phone to the <b>same Wi-Fi</b> as this Mac.</li>
+        <li>Open the camera and scan the QR code.</li>
+        <li>Install it like an app:<br><b>iPhone (Safari):</b> Share → Add to Home Screen<br><b>Android (Chrome):</b> ⋮ menu → Add to Home screen / Install app</li>
+        <li>Open <b>PayRight</b> from your home screen — it runs full-screen.</li>
+      </ol>
+      <div class="btns">
+        <a class="btn pri" id="openMac" href="app/">Open the app on this Mac</a>
+        <a class="btn ghost" href="index.html">Open the website</a>
+      </div>
+      <div class="warn" id="warn">Couldn't detect this Mac's Wi-Fi address. Start this page using “Open PayRight on Phone.command”.</div>
+      <p class="note">If the phone can't load the page, the Wi-Fi may block device-to-device connections (common on college networks). Turn on your phone's hotspot, connect the Mac to it, and double-click the launcher again.</p>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+    var q = new URLSearchParams(location.search);
+    var ip = q.get("ip"), port = q.get("port") || location.port || "8000";
+    var url = ip ? "http://" + ip + ":" + port + "/app/" : "";
+    document.getElementById("url").textContent = url || "—";
+    if (!ip) document.getElementById("warn").style.display = "block";
+    if (url && window.QRCode) new QRCode(document.getElementById("qr"), { text: url, width: 280, height: 280, colorDark: "#16142A", colorLight: "#ffffff" });
+    else document.getElementById("qr").style.display = url ? "" : "none";
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 329 392] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1971 >>
+stream
+BT /F1 9.5 Tf 22 360.5 Td (==================================================) Tj ET
+BT /F2 9.5 Tf 22 347.5 Td (METRO HEART INSTITUTE) Tj ET
+BT /F1 9.5 Tf 22 334.5 Td (Banjara Hills, Hyderabad) Tj ET
+BT /F1 9.5 Tf 22 321.5 Td (Final Inpatient Bill) Tj ET
+BT /F1 9.5 Tf 22 308.5 Td (Patient: [REDACTED]) Tj ET
+BT /F1 9.5 Tf 22 295.5 Td (UHID: MHI-2207731) Tj ET
+BT /F1 9.5 Tf 22 282.5 Td (Admission: 18-10-2026 22:10) Tj ET
+BT /F1 9.5 Tf 22 269.5 Td (Discharge: 20-10-2026 11:00) Tj ET
+BT /F1 9.5 Tf 22 256.5 Td (Date: 20-10-2026 Time: 11:20) Tj ET
+BT /F1 9.5 Tf 22 243.5 Td (--------------------------------------------------) Tj ET
+BT /F1 9.5 Tf 22 230.5 Td (ITEM                        QTY     RATE    AMOUNT) Tj ET
+BT /F1 9.5 Tf 22 217.5 Td (--------------------------------------------------) Tj ET
+BT /F1 9.5 Tf 22 204.5 Td (Private Room                  2  4500.00   9000.00) Tj ET
+BT /F1 9.5 Tf 22 191.5 Td (Cardiologist Visit            2  1200.00   2400.00) Tj ET
+BT /F1 9.5 Tf 22 178.5 Td (ECG                           2   350.00    900.00) Tj ET
+BT /F1 9.5 Tf 22 165.5 Td (2D Echo                       1  2800.00   2800.00) Tj ET
+BT /F1 9.5 Tf 22 152.5 Td (Troponin Test                 1  1400.00   1400.00) Tj ET
+BT /F1 9.5 Tf 22 139.5 Td (Atorvastatin 40 \(MRP 24.00\)  10    22.00    220.00) Tj ET
+BT /F1 9.5 Tf 22 126.5 Td (Pharmacy Consumables          1   850.00    850.00) Tj ET
+BT /F1 9.5 Tf 22 113.5 Td (--------------------------------------------------) Tj ET
+BT /F1 9.5 Tf 22 100.5 Td (Subtotal                                  17570.00) Tj ET
+BT /F1 9.5 Tf 22 87.5 Td (Nursing and Service Charges                1200.00) Tj ET
+BT /F1 9.5 Tf 22 74.5 Td (==================================================) Tj ET
+BT /F2 9.5 Tf 22 61.5 Td (TOTAL \(Rs.\)                               18770.00) Tj ET
+BT /F1 9.5 Tf 22 48.5 Td (==================================================) Tj ET
+BT /F1 9.5 Tf 22 35.5 Td (Wishing you a speedy recovery.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000002274 00000 n 
+0000002342 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2415
+%%EOF

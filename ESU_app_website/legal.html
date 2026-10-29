@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Legal — PayRight</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M8 4h24a2 2 0 0 1 2 2v30l-4-3-4 3-4-3-4 3-4-3-4 3-4-3V6a2 2 0 0 1 2-2z' fill='%2316142A'/%3E%3Cpath d='M13 19.5l5 5 9.5-10' stroke='%236D4BFF' stroke-width='3.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+  <script>try{var t=localStorage.getItem('pr-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<header id="nav"></header>
+
+<section class="page-hero" style="padding-bottom:30px">
+  <div class="wrap">
+    <span class="kicker" data-reveal>Legal</span>
+    <h1 class="display h-xl split-words">The fine print, <span class="ital">not</span> so fine.</h1>
+    <p class="lead" data-reveal>Written to be read — plain language, no surprises.</p>
+  </div>
+</section>
+
+<section style="padding-bottom:120px">
+  <div class="wrap legal-body">
+    <div class="tabs" id="tabs">
+      <button data-p="privacy" class="on">Privacy policy</button>
+      <button data-p="terms">Terms of service</button>
+      <button data-p="disclaimer">Disclaimer</button>
+    </div>
+
+    <div class="legal-pane on" id="privacy">
+      <h3>What we collect</h3>
+      <ul><li>Account details you give us — name, email.</li><li>Receipts you scan and the fields extracted from them.</li><li>Corrections you make, groups you create and settlements you record.</li></ul>
+      <h3>How we use it</h3>
+      <p>To audit your bills, keep your history, split expenses and improve extraction accuracy. Receipts are stored privately and accessed through short-lived links.</p>
+      <h3>What we never do</h3>
+      <ul><li>Sell identifiable receipt or complaint data.</li><li>Show your personal transactions on public merchant pages.</li><li>Share evidence with a merchant or authority without your explicit action.</li></ul>
+      <h3>Your controls</h3>
+      <p>Export your data or delete your account at any time from Settings in the app. Deleted receipts are removed from active systems.</p>
+    </div>
+
+    <div class="legal-pane" id="terms">
+      <h3>Using PayRight</h3>
+      <p>PayRight provides bill analysis, expense tools and general consumer-rights information. You're responsible for the receipts you upload and for any messages you choose to send.</p>
+      <h3>Accuracy</h3>
+      <p>Extraction may contain errors. You can review and correct every field before an audit is finalised. Arithmetic checks are deterministic; rule-based guidance depends on the rule version shown in each report.</p>
+      <h3>Payments</h3>
+      <p>PayRight does not move money between users. Settlements are records you create.</p>
+      <h3>Fair use</h3>
+      <p>Don't upload receipts that aren't yours, submit false reports about merchants, or misuse the complaint tools.</p>
+    </div>
+
+    <div class="legal-pane" id="disclaimer">
+      <h3>Not legal advice</h3>
+      <p>PayRight offers legal information, not individual legal advice. It is not a law firm, statutory authority, regulator, payment institution or government-approved enforcement agency.</p>
+      <h3>No accusations</h3>
+      <p>A flagged charge is not a finding that a business acted unlawfully. Labels such as “Review” or “Unexplained” mean a question is worth asking.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="foot"></footer>
+
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="assets/site.js"></script>
+<script>
+  function show(id) {
+    document.querySelectorAll(".legal-pane").forEach(p => p.classList.toggle("on", p.id === id));
+    document.querySelectorAll("#tabs button").forEach(b => b.classList.toggle("on", b.dataset.p === id));
+  }
+  document.querySelectorAll("#tabs button").forEach(b => b.onclick = () => { show(b.dataset.p); history.replaceState(null, "", "#" + b.dataset.p); });
+  const h = location.hash.slice(1);
+  if (["privacy", "terms", "disclaimer"].includes(h)) show(h);
+  addEventListener("hashchange", () => { const k = location.hash.slice(1); if (document.getElementById(k)) show(k); });
+</script>
+</body>
+</html>

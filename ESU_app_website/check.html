@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Check a Bill — PayRight</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M8 4h24a2 2 0 0 1 2 2v30l-4-3-4 3-4-3-4 3-4-3-4 3-4-3V6a2 2 0 0 1 2-2z' fill='%2316142A'/%3E%3Cpath d='M13 19.5l5 5 9.5-10' stroke='%236D4BFF' stroke-width='3.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+  <script>try{var t=localStorage.getItem('pr-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<header id="nav"></header>
+
+<section class="page-hero" style="padding-bottom:40px">
+  <div class="wrap">
+    <span class="kicker" data-reveal>Bill checker</span>
+    <h1 class="display h-xl split-words">Pick a bill. <span class="ital">Watch it</span> get checked.</h1>
+    <p class="lead" data-reveal>Pick a recent bill — restaurant, café or hospital — or upload your own bill PDF. Everything runs right in your browser.</p>
+  </div>
+</section>
+
+<section style="padding-bottom:120px">
+  <div class="wrap">
+    <div class="picker" id="picker"></div>
+    <input type="file" id="pdfInput" accept="application/pdf,.pdf" hidden>
+
+    <div class="check-stage">
+      <div class="check-left" data-reveal>
+        <div id="receiptView"></div>
+        <ol class="stages" id="stages"></ol>
+        <button class="btn btn-accent" id="runBtn" style="margin-top:24px;width:100%;justify-content:center">Run audit <span class="arr">→</span></button>
+      </div>
+      <div id="results">
+        <div class="empty-state">
+          <div class="display h-m">Your report appears here.</div>
+          <p>Choose a receipt above, then press <b>Run audit</b>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- message modal -->
+<div class="modal" id="msgModal" role="dialog" aria-modal="true" aria-labelledby="msgTitle">
+  <div class="modal-box">
+    <h3 id="msgTitle">A polite clarification</h3>
+    <p class="muted">Edit anything before you send it. PayRight never sends messages on your behalf.</p>
+    <textarea id="msgText"></textarea>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn btn-primary" id="copyMsg">Copy message</button>
+      <a class="btn btn-ghost" id="waMsg" target="_blank" rel="noopener">Share via WhatsApp</a>
+      <button class="btn btn-ghost" data-close>Close</button>
+    </div>
+  </div>
+</div>
+
+<footer id="foot"></footer>
+
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="assets/site.js"></script>
+<script src="assets/billcore.js"></script>
+<script src="assets/check.js"></script>
+</body>
+</html>

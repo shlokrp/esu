@@ -1,0 +1,65 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 329 444] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 2320 >>
+stream
+BT /F1 9.5 Tf 22 412.5 Td (==================================================) Tj ET
+BT /F2 9.5 Tf 22 399.5 Td (SUNRISE MULTISPECIALITY HOSPITAL) Tj ET
+BT /F1 9.5 Tf 22 386.5 Td (Andheri East, Mumbai) Tj ET
+BT /F1 9.5 Tf 22 373.5 Td (Final Inpatient Bill) Tj ET
+BT /F1 9.5 Tf 22 360.5 Td (Patient: [REDACTED]) Tj ET
+BT /F1 9.5 Tf 22 347.5 Td (UHID: SMH-0099812) Tj ET
+BT /F1 9.5 Tf 22 334.5 Td (Admission: 03-10-2026 10:15) Tj ET
+BT /F1 9.5 Tf 22 321.5 Td (Discharge: 06-10-2026 12:00) Tj ET
+BT /F1 9.5 Tf 22 308.5 Td (Date: 06-10-2026 Time: 12:40) Tj ET
+BT /F1 9.5 Tf 22 295.5 Td (--------------------------------------------------) Tj ET
+BT /F1 9.5 Tf 22 282.5 Td (ITEM                        QTY     RATE    AMOUNT) Tj ET
+BT /F1 9.5 Tf 22 269.5 Td (--------------------------------------------------) Tj ET
+BT /F1 9.5 Tf 22 256.5 Td (Room Rent Twin Sharing        4  3500.00  14000.00) Tj ET
+BT /F1 9.5 Tf 22 243.5 Td (Nursing Charges               3   600.00   1800.00) Tj ET
+BT /F1 9.5 Tf 22 230.5 Td (Doctor Visit                  3   800.00   2400.00) Tj ET
+BT /F1 9.5 Tf 22 217.5 Td (CBC Test                      1   450.00    450.00) Tj ET
+BT /F1 9.5 Tf 22 204.5 Td (CBC Test                      1   450.00    450.00) Tj ET
+BT /F1 9.5 Tf 22 191.5 Td (Chest X-Ray                   1   900.00    900.00) Tj ET
+BT /F1 9.5 Tf 22 178.5 Td (Paracetamol 500 \(MRP 2.00\)   15     2.50     37.50) Tj ET
+BT /F1 9.5 Tf 22 165.5 Td (Pantoprazole 40 \(MRP 14.50\)  10    14.50    145.00) Tj ET
+BT /F1 9.5 Tf 22 152.5 Td (IV Set                        2   180.00    360.00) Tj ET
+BT /F1 9.5 Tf 22 139.5 Td (--------------------------------------------------) Tj ET
+BT /F1 9.5 Tf 22 126.5 Td (Subtotal                                  20542.50) Tj ET
+BT /F1 9.5 Tf 22 113.5 Td (Admin Charges                              1500.00) Tj ET
+BT /F1 9.5 Tf 22 100.5 Td (Miscellaneous Charges                       750.00) Tj ET
+BT /F1 9.5 Tf 22 87.5 Td (Round Off                                     0.50) Tj ET
+BT /F1 9.5 Tf 22 74.5 Td (==================================================) Tj ET
+BT /F2 9.5 Tf 22 61.5 Td (TOTAL \(Rs.\)                               22793.00) Tj ET
+BT /F1 9.5 Tf 22 48.5 Td (==================================================) Tj ET
+BT /F1 9.5 Tf 22 35.5 Td (Wishing you a speedy recovery.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000002623 00000 n 
+0000002691 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2764
+%%EOF

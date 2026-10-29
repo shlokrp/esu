@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PayRight — Every rupee, explained</title>
+  <meta name="description" content="Scan your bills, understand every charge, spot discrepancies and split expenses — all in one consumer app.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M8 4h24a2 2 0 0 1 2 2v30l-4-3-4 3-4-3-4 3-4-3-4 3-4-3V6a2 2 0 0 1 2-2z' fill='%2316142A'/%3E%3Cpath d='M13 19.5l5 5 9.5-10' stroke='%236D4BFF' stroke-width='3.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+  <script>try{var t=localStorage.getItem('pr-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<header id="nav"></header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="blob a"></div><div class="blob b"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker" data-reveal>Bill intelligence for India</span>
+      <h1 class="display h-xxl split-words">Every rupee, <span class="ital">explained.</span></h1>
+      <p class="lead" data-reveal style="--d:.35s">From a ₹105 chai to a ₹22,000 hospital stay — understand every charge, spot discrepancies and split expenses in one consumer app.</p>
+      <div class="hero-ctas" data-reveal style="--d:.5s">
+        <a href="check.html" class="btn btn-primary">Scan a bill <span class="arr">→</span></a>
+        <a href="#how" class="btn btn-ghost">Explore PayRight</a>
+      </div>
+      <p class="hero-note" data-reveal style="--d:.65s"><span class="dot"></span>No sign-up needed to check your first bill.</p>
+    </div>
+
+    <div data-reveal="scale" style="--d:.3s">
+      <div class="phone hero-phone" id="heroPhone" data-step="0">
+        <div class="screen">
+          <div class="hp capture">
+            <div class="hp-head"><span>Scan bill</span><span class="hp-chip" id="hpChip">Align receipt</span></div>
+            <div class="receipt" style="position:relative">
+              <div class="scanline"></div>
+              <div class="r-title">THE COASTAL TABLE</div>
+              <div class="r-sub">Bandra West · 14 Oct 2026 · 21:42</div>
+              <div class="r-row it"><span>Prawn Koliwada</span><span>420.00</span></div>
+              <div class="r-row it"><span>Fish Curry Rice</span><span>380.00</span></div>
+              <div class="r-row it"><span>Neer Dosa ×2</span><span>180.00</span></div>
+              <div class="r-row it"><span>Sol Kadhi ×2</span><span>160.00</span></div>
+              <div class="r-row it"><span>Bebinca ×2</span><span>500.00</span></div>
+              <div class="r-hr"></div>
+              <div class="r-row"><span>Subtotal</span><span>1640.00</span></div>
+              <div class="r-row tx"><span>CGST 2.5%</span><span>41.00</span></div>
+              <div class="r-row tx"><span>SGST 2.5%</span><span>41.00</span></div>
+              <div class="r-row fee"><span>Service chg 10%</span><span>164.00</span></div>
+              <div class="r-hr"></div>
+              <div class="r-row r-total"><span>TOTAL</span><span>₹1886.00</span></div>
+            </div>
+          </div>
+          <div class="hp result">
+            <div class="hp-head"><span>Audit report</span><span class="hp-chip">Just now</span></div>
+            <div class="res-label">The Coastal Table · Total payable</div>
+            <div class="res-total">₹1,886</div>
+            <div style="display:flex;gap:6px;margin:12px 0 6px;flex-wrap:wrap">
+              <span class="tag ok">4 verified</span><span class="tag opt">1 optional</span>
+            </div>
+            <div class="mini-row"><span class="mark ok">✓</span>Items add up<span class="amt">₹1,640</span></div>
+            <div class="mini-row"><span class="mark ok">✓</span>GST 5% recalculated<span class="amt">₹82</span></div>
+            <div class="mini-row"><span class="mark opt">○</span>Service charge<span class="amt">₹164</span></div>
+            <div class="mini-row" style="background:var(--warn-soft);border-color:transparent;font-size:12px;line-height:1.4">Service charge may be voluntary under current guidance. You can ask for it to be removed.</div>
+            <div class="mini-row" style="background:var(--ink);color:var(--bg);justify-content:center;font-weight:700">Generate a polite message →</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Service charge</span><span class="sep">/</span><span class="hl">Packaging fee?</span><span class="sep">/</span><span>CGST</span><span class="sep">/</span><span>SGST</span><span class="sep">/</span><span class="hl">Platform fee?</span><span class="sep">/</span><span>Convenience fee</span><span class="sep">/</span><span class="hl">Round off?</span><span class="sep">/</span><span>Room rent ×4</span><span class="sep">/</span><span class="hl">Admin charges?</span><span class="sep">/</span><span>Miscellaneous</span><span class="sep">/</span>
+    <span>Service charge</span><span class="sep">/</span><span class="hl">Packaging fee?</span><span class="sep">/</span><span>CGST</span><span class="sep">/</span><span>SGST</span><span class="sep">/</span><span class="hl">Platform fee?</span><span class="sep">/</span><span>Convenience fee</span><span class="sep">/</span><span class="hl">Round off?</span><span class="sep">/</span><span>Room rent ×4</span><span class="sep">/</span><span class="hl">Admin charges?</span><span class="sep">/</span><span>Miscellaneous</span><span class="sep">/</span>
+  </div>
+</div>
+
+<!-- ============ PROBLEM ============ -->
+<section class="sec">
+  <div class="wrap problem">
+    <div>
+      <span class="kicker" data-reveal>The problem</span>
+      <p class="statement" data-light style="margin-top:22px">A bill is a promise about money. Most of us pay it in <em class="ital">eight seconds</em> without checking a single line.</p>
+    </div>
+    <div class="confuse-stack">
+      <div class="confuse" data-reveal="right" style="--r:-1.5deg"><div>Service Charge (SC) 10%<span class="q">Is this compulsory?</span></div><b>₹164</b></div>
+      <div class="confuse" data-reveal="right" style="--r:1deg;--d:.1s"><div>Butter Naan ×3<br>Butter Naan ×3<span class="q">Ordered once. Billed twice?</span></div><b>₹270</b></div>
+      <div class="confuse" data-reveal="right" style="--r:-.6deg;--d:.2s"><div>Disc. FLAT20 (-)<span class="q">Applied to the right amount?</span></div><b>-₹96</b></div>
+      <div class="confuse" data-reveal="right" style="--r:1.4deg;--d:.3s"><div>Staff welfare fund<span class="q">What is this, exactly?</span></div><b>₹50</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS (sticky scroll story) ============ -->
+<section class="story" id="how" data-step="0">
+  <div class="story-stick">
+    <div class="wrap story-grid">
+      <div>
+        <span class="kicker">How it works</span>
+        <div class="story-steps" style="margin-top:20px">
+          <div class="story-step on">
+            <span class="num">01 / 04</span>
+            <h3>Scan.</h3>
+            <p>Point your camera at a paper bill, or upload a screenshot or PDF. Blur and low light are caught before you upload.</p>
+          </div>
+          <div class="story-step">
+            <span class="num">02 / 04</span>
+            <h3>Read.</h3>
+            <p>Merchant, items, quantities, taxes and fees become structured fields. You can correct anything we misread.</p>
+          </div>
+          <div class="story-step">
+            <span class="num">03 / 04</span>
+            <h3>Check.</h3>
+            <p>We rebuild the bill from scratch — every multiplication, tax and fee — and never trust the printed total blindly.</p>
+          </div>
+          <div class="story-step">
+            <span class="num">04 / 04</span>
+            <h3>Act.</h3>
+            <p>See what is verified, what is optional and what needs a question. Then message the manager, split it, or save it.</p>
+          </div>
+        </div>
+        <div class="story-progress"><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></div>
+      </div>
+
+      <div class="story-visual">
+        <div class="receipt sv-receipt">
+          <div class="scanline"></div>
+          <div class="r-title">THE COASTAL TABLE</div>
+          <div class="r-sub">Bandra West · 14 Oct 2026</div>
+          <div class="r-row it"><span>Prawn Koliwada</span><span>420.00</span></div>
+          <div class="r-row it"><span>Fish Curry Rice</span><span>380.00</span></div>
+          <div class="r-row it"><span>Neer Dosa ×2</span><span>180.00</span></div>
+          <div class="r-row it"><span>Sol Kadhi ×2</span><span>160.00</span></div>
+          <div class="r-row it"><span>Bebinca ×2</span><span>500.00</span></div>
+          <div class="r-hr"></div>
+          <div class="r-row tx"><span>CGST 2.5%</span><span>41.00</span></div>
+          <div class="r-row tx"><span>SGST 2.5%</span><span>41.00</span></div>
+          <div class="r-row fee"><span>Service chg</span><span>164.00</span></div>
+          <div class="r-hr"></div>
+          <div class="r-row r-total"><span>TOTAL</span><span>1886.00</span></div>
+        </div>
+        <div class="sv-fields">
+          <div class="sv-field"><div><small>MERCHANT · 98%</small><b>The Coastal Table</b></div></div>
+          <div class="sv-field"><div><small>LINE ITEMS · 5 found</small><b>₹1,640.00</b></div></div>
+          <div class="sv-field"><div><small>TAX · CGST + SGST</small><b>₹82.00</b></div></div>
+          <div class="sv-field"><div><small>FEE · service charge</small><b>₹164.00</b></div></div>
+          <div class="sv-field"><div><small>PRINTED TOTAL</small><b>₹1,886.00</b></div></div>
+        </div>
+        <div class="sv-card sv-calc">
+          <h4>Rebuilt from scratch</h4>
+          <div class="calc-row"><span>Items (5 lines)</span><b>1,640.00</b><span class="mark ok">✓</span></div>
+          <div class="calc-row"><span>CGST 2.5% of 1,640</span><b>41.00</b><span class="mark ok">✓</span></div>
+          <div class="calc-row"><span>SGST 2.5% of 1,640</span><b>41.00</b><span class="mark ok">✓</span></div>
+          <div class="calc-row"><span>Service charge 10%</span><b>164.00</b><span class="mark opt">○</span></div>
+          <div class="calc-row tot"><span>Our total</span><b>1,886.00</b><span class="mark ok">✓</span></div>
+        </div>
+        <div class="sv-card sv-act">
+          <span class="tag opt">Optional</span>
+          <h4 style="margin-top:12px">Service charge ₹164</h4>
+          <p style="font-size:15px;color:var(--ink-2)">Arithmetic is correct. Current consumer-protection guidance treats this as voluntary — you may ask for it to be removed.</p>
+          <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap">
+            <span class="btn btn-primary btn-sm">Ask politely</span>
+            <span class="btn btn-ghost btn-sm">Split bill</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES (horizontal scroll) ============ -->
+<section class="hscroll" id="features">
+  <div class="hscroll-stick">
+    <div class="wrap hscroll-head">
+      <div>
+        <span class="kicker">What a receipt becomes</span>
+        <h2 class="display h-l" style="margin-top:16px">One bill. <span class="ital">Eight</span> uses.</h2>
+      </div>
+      <div class="hscroll-count"><b>01</b> / 08</div>
+    </div>
+    <div class="htrack">
+      <article class="fpanel">
+        <div class="fpanel-txt"><span class="n">01</span><h3>A checked calculation.</h3>
+          <p>Every line is multiplied, summed and taxed again — with decimal-exact arithmetic, not guesswork.</p>
+          <span class="foot">Bill scanner · restaurants first</span></div>
+        <div class="fpanel-vis"><div class="ui">
+          <div class="ui-title">Reconciliation <span class="tag ok">Match</span></div>
+          <div class="calc-row"><span>Printed total</span><b>1,886.00</b></div>
+          <div class="calc-row"><span>Our total</span><b>1,886.00</b></div>
+          <div class="calc-row tot"><span>Difference</span><b style="color:var(--ok)">0.00</b></div>
+        </div></div>
+      </article>
+      <article class="fpanel">
+        <div class="fpanel-txt"><span class="n">02</span><h3>Every charge, in plain words.</h3>
+          <p>Tap any fee to see what it is, how it was calculated, and whether it looks optional, verified or unexplained.</p>
+          <span class="foot">Explanations with evidence</span></div>
+        <div class="fpanel-vis"><div class="ui">
+          <div class="ui-title">Packaging charge <span class="tag unx">Unexplained</span></div>
+          <p style="color:var(--ink-2)">A ₹40 packaging fee appears on a dine-in bill. We couldn't find what it covers.</p>
+          <div class="src">Confidence · extraction 96% · rule match low</div>
+        </div></div>
+      </article>
+      <article class="fpanel dark">
+        <div class="fpanel-txt"><span class="n">03</span><h3>Ask PayRight.</h3>
+          <p>A consumer-rights assistant that answers with sources, dates and honest uncertainty — not made-up law.</p>
+          <span class="foot">Grounded answers · cited sources</span></div>
+        <div class="fpanel-vis"><div class="ui">
+          <div class="bubble me">Is this service charge mandatory?</div>
+          <div class="bubble ai">Under the CCPA's 2022 guidelines, restaurants shouldn't add it by default — it's voluntary. Ask for it to be removed.<br><span class="src">Source · CCPA guideline · Jul 2022</span></div>
+        </div></div>
+      </article>
+      <article class="fpanel">
+        <div class="fpanel-txt"><span class="n">04</span><h3>A fair split.</h3>
+          <p>Assign dishes to people. Tax, fees and discounts are shared in proportion — down to the paisa.</p>
+          <span class="foot">Equal · item-wise · custom</span></div>
+        <div class="fpanel-vis"><div class="ui">
+          <div class="ui-title">Item-wise split <div class="avatars"><span class="av c1">A</span><span class="av c2">R</span><span class="av c3">K</span></div></div>
+          <div class="split-row"><span class="av c1">A</span>Aarav<span class="amt">₹612.40</span></div>
+          <div class="split-row"><span class="av c2">R</span>Riya<span class="amt">₹548.80</span></div>
+          <div class="split-row"><span class="av c3">K</span>Kabir<span class="amt">₹560.80</span></div>
+        </div></div>
+      </article>
+      <article class="fpanel">
+        <div class="fpanel-txt"><span class="n">05</span><h3>Compare like for like.</h3>
+          <p>See what the same item costs elsewhere — with serving size, source and last-updated date shown.</p>
+          <span class="foot">Matching confidence shown</span></div>
+        <div class="fpanel-vis"><div class="ui">
+          <div class="ui-title">Cold coffee · 350 ml</div>
+          <table class="cmp">
+            <tr><td>Brew &amp; Bloom (your bill)</td><td>₹220</td></tr>
+            <tr><td>Kettle House · menu</td><td>₹180</td></tr>
+            <tr><td>Bean Street · menu</td><td>₹195</td></tr>
+          </table>
+          <div class="src">Menu prices · updated 12 Oct</div>
+        </div></div>
+      </article>
+      <article class="fpanel">
+        <div class="fpanel-txt"><span class="n">06</span><h3>Merchant transparency.</h3>
+          <p>Billing patterns from verified receipts — normalised, moderated and never a raw complaint count.</p>
+          <span class="foot">Separate scores · bill count shown</span></div>
+        <div class="fpanel-vis"><div class="ui">
+          <div class="ui-title">Tandoor Lane <span class="tag plain">41 bills</span></div>
+          <small class="muted">Billing transparency</small><div class="meter"><b style="--v:62%"></b></div>
+          <small class="muted">Complaint responsiveness</small><div class="meter"><b style="--v:78%"></b></div>
+          <small class="muted">Based on 41 verified receipts</small>
+        </div></div>
+      </article>
+      <article class="fpanel">
+        <div class="fpanel-txt"><span class="n">07</span><h3>Evidence for a complaint.</h3>
+          <p>When talking doesn't work, turn the audit into a clear, factual complaint and track every step.</p>
+          <span class="foot">Drafts · timelines · NCH guidance</span></div>
+        <div class="fpanel-vis"><div class="ui">
+          <div class="ui-title">Complaint #PR-2041</div>
+          <div class="tl">
+            <div class="tl-i done">Draft prepared<small>12 Oct</small></div>
+            <div class="tl-i done">Sent to merchant<small>13 Oct · by you</small></div>
+            <div class="tl-i">Awaiting response<small>Day 3 of 7</small></div>
+          </div>
+        </div></div>
+      </article>
+      <article class="fpanel dark">
+        <div class="fpanel-txt"><span class="n">08</span><h3>Spending, made visible.</h3>
+          <p>Monthly trends, categories and documented refunds — kept separate from "potential" savings.</p>
+          <span class="foot">Insights from your own bills</span></div>
+        <div class="fpanel-vis"><div class="ui">
+          <div class="ui-title">Eating out <span class="muted" style="font-size:12px">last 6 months</span></div>
+          <div class="bar-chart"><i class="soft" style="--h:40%"></i><i class="soft" style="--h:55%"></i><i class="soft" style="--h:48%"></i><i class="soft" style="--h:70%"></i><i class="soft" style="--h:62%"></i><i style="--h:84%"></i></div>
+        </div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEYOND RESTAURANTS ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker" data-reveal>Beyond restaurants</span>
+      <h2 class="display h-xl split-words">The bigger the bill, <span class="ital">the more</span> it hides.</h2>
+      <p class="lead" data-reveal>Restaurants are where we start. Hospital bills are where it matters most — long, rushed, and paid at the worst possible moment.</p>
+    </div>
+    <div class="problem" style="align-items:center">
+      <div class="receipt" data-reveal="left" style="max-width:440px;font-size:13px">
+        <div class="r-title">SUNRISE MULTISPECIALITY HOSPITAL</div>
+        <div class="r-sub">Admitted 03-10 · Discharged 06-10 · 3 nights</div>
+        <div class="r-row" style="background:var(--bad-soft)"><span>Room Rent ×4 days</span><span>14000.00</span></div>
+        <div class="r-row"><span>Nursing ×3</span><span>1800.00</span></div>
+        <div class="r-row"><span>Doctor Visit ×3</span><span>2400.00</span></div>
+        <div class="r-row" style="background:var(--bad-soft)"><span>CBC Test</span><span>450.00</span></div>
+        <div class="r-row" style="background:var(--bad-soft)"><span>CBC Test</span><span>450.00</span></div>
+        <div class="r-row" style="background:var(--bad-soft)"><span>Paracetamol ×15 (MRP 2)</span><span>37.50</span></div>
+        <div class="r-row" style="background:var(--info-soft)"><span>Admin Charges</span><span>1500.00</span></div>
+        <div class="r-row" style="background:var(--info-soft)"><span>Miscellaneous</span><span>750.00</span></div>
+        <div class="r-hr"></div>
+        <div class="r-row r-total"><span>TOTAL</span><span>₹22,793.00</span></div>
+      </div>
+      <div class="vocab">
+        <div class="vocab-row" data-reveal style="grid-template-columns:60px 1fr"><span class="mark rev"><i>!</i></span><div><h3 style="font-size:clamp(26px,2.6vw,38px)">4 days billed, 3 nights stayed</h3><p>Per-day charges checked against admission and discharge dates.</p></div></div>
+        <div class="vocab-row" data-reveal style="grid-template-columns:60px 1fr"><span class="mark rev"><i>!</i></span><div><h3 style="font-size:clamp(26px,2.6vw,38px)">Same test, twice</h3><p>Repeated tests and procedures flagged for a quick check.</p></div></div>
+        <div class="vocab-row" data-reveal style="grid-template-columns:60px 1fr"><span class="mark rev"><i>!</i></span><div><h3 style="font-size:clamp(26px,2.6vw,38px)">Medicines above MRP</h3><p>Every unit price compared with the printed MRP.</p></div></div>
+        <div class="vocab-row" data-reveal style="grid-template-columns:60px 1fr"><span class="mark unx">?</span><div><h3 style="font-size:clamp(26px,2.6vw,38px)">"Admin" and "Misc."</h3><p>Lump sums with no breakdown — you can ask for an itemised bill.</p></div></div>
+      </div>
+    </div>
+    <div class="vocab" style="margin-top:90px">
+      <div class="vocab-row" data-reveal><span class="tag ok">Live</span><h3 style="font-size:clamp(34px,4vw,60px)">Restaurants &amp; cafés</h3><p>Service charge, GST, discounts, duplicates, packaging fees.</p></div>
+      <div class="vocab-row" data-reveal><span class="tag unx">Beta</span><h3 style="font-size:clamp(34px,4vw,60px)">Hospitals &amp; clinics</h3><p>Stay-length, duplicate tests, MRP on medicines, unitemised charges, GST on healthcare.</p></div>
+      <div class="vocab-row" data-reveal><span class="tag opt">Beta</span><h3 style="font-size:clamp(34px,4vw,60px)">Grocery &amp; delivery</h3><p>MRP checks, carry-bag charges, platform and delivery fees.</p></div>
+      <div class="vocab-row" data-reveal><span class="tag need">Next</span><h3 style="font-size:clamp(34px,4vw,60px)">Hotels, travel, utilities</h3><p>Added only after their rules are researched and tested.</p></div>
+    </div>
+    <div data-reveal style="margin-top:40px"><a href="check.html?r=sunrise" class="btn btn-primary">See a hospital bill checked <span class="arr">→</span></a></div>
+  </div>
+</section>
+
+<!-- ============ STATUS VOCABULARY ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker" data-reveal>Calm, not alarmist</span>
+      <h2 class="display h-xl split-words">Five words. <span class="ital">No</span> false alarms.</h2>
+      <p class="lead" data-reveal>Unusual doesn't mean illegal. Every finding gets one of five honest labels — each with its own shape, so it never depends on colour alone.</p>
+    </div>
+    <div class="vocab">
+      <div class="vocab-row" data-reveal><span class="mark ok">✓</span><h3>Verified</h3><p>Checked and supported by the evidence on the bill. The maths works.</p></div>
+      <div class="vocab-row" data-reveal><span class="mark rev"><i>!</i></span><h3>Review</h3><p>Something looks inconsistent — like a sum that doesn't add up — and is worth a question.</p></div>
+      <div class="vocab-row" data-reveal><span class="mark opt">○</span><h3>Optional</h3><p>A fee that may be discretionary under a verified rule. You can choose.</p></div>
+      <div class="vocab-row" data-reveal><span class="mark unx">?</span><h3>Unexplained</h3><p>We can't establish why it was charged. Not wrong — just unclear.</p></div>
+      <div class="vocab-row" data-reveal><span class="mark need">…</span><h3>Needs info</h3><p>We'd need more context — a menu, an offer, a policy — to decide.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRY IT ============ -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="band" data-reveal="scale">
+      <div class="ring" data-speed=".08"></div>
+      <span class="kicker">Try it now</span>
+      <h2 class="display h-xl">Check a bill<br>in seconds.</h2>
+      <p>Pick a bill or upload your own PDF and watch PayRight read it, rebuild it and explain it — right in your browser, no account needed.</p>
+      <div style="margin-top:34px;display:flex;gap:12px;flex-wrap:wrap">
+        <a href="check.html" class="btn btn-primary">Check a bill <span class="arr">→</span></a>
+        <a href="rights.html" class="btn btn-ghost" style="border-color:rgba(255,255,255,.25);color:inherit">Read the rights hub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WEBSITE vs APP ============ -->
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker" data-reveal>Two ways in</span>
+      <h2 class="display h-l split-words">Learn here. <span class="ital">Use it</span> in your pocket.</h2>
+    </div>
+    <div class="duo">
+      <div class="duo-card" data-reveal="left">
+        <span class="kicker">This website</span>
+        <h3>Understand your rights.</h3>
+        <ul><li>Consumer rights knowledge hub</li><li>Instant bill check in your browser</li><li>Pricing &amp; plans</li><li>How PayRight decides what to flag</li></ul>
+        <a href="rights.html" class="btn btn-primary">Open the hub <span class="arr">→</span></a>
+      </div>
+      <div class="duo-card app" data-reveal="right">
+        <span class="kicker">The PayRight app</span>
+        <h3>Scan, split, settle.</h3>
+        <ul><li>Camera scanning &amp; audit reports</li><li>Item-wise bill splitting &amp; groups</li><li>Ask PayRight assistant</li><li>Complaint tracking &amp; bill history</li></ul>
+        <a href="#" data-app="" class="btn">Open the app <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING TEASER ============ -->
+<section class="sec" style="padding-top:40px">
+  <div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:50px;align-items:end">
+    <div>
+      <span class="kicker" data-reveal>Pricing</span>
+      <h2 class="display h-xl split-words" style="margin-top:18px">Free to start. <span class="ital">₹79</span> for more.</h2>
+    </div>
+    <div data-reveal>
+      <p class="lead" style="margin-bottom:28px">Scan, audit and split for free. PayRight Plus adds unlimited fair-use scans, detailed analytics and exports.</p>
+      <a href="pricing.html" class="btn btn-primary">Compare plans <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<footer id="foot"></footer>
+
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="assets/site.js"></script>
+<script>
+  // Hero phone: cycle capture → scanning → extraction → audit report
+  (function () {
+    const ph = document.getElementById("heroPhone");
+    const chip = document.getElementById("hpChip");
+    const labels = ["Align receipt", "Reading…", "Extracting fields", ""];
+    let s = 0;
+    setInterval(() => {
+      s = (s + 1) % 4;
+      ph.dataset.step = s;
+      chip.textContent = labels[s];
+    }, 2200);
+  })();
+</script>
+</body>
+</html>

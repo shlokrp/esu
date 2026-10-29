@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consumer Rights Hub — PayRight</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M8 4h24a2 2 0 0 1 2 2v30l-4-3-4 3-4-3-4 3-4-3-4 3-4-3V6a2 2 0 0 1 2-2z' fill='%2316142A'/%3E%3Cpath d='M13 19.5l5 5 9.5-10' stroke='%236D4BFF' stroke-width='3.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+  <script>try{var t=localStorage.getItem('pr-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<header id="nav"></header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="kicker" data-reveal>Consumer rights knowledge hub</span>
+    <h1 class="display h-xl split-words">Know what you <span class="ital">can</span> say no to.</h1>
+    <p class="lead" data-reveal>Plain-language answers about restaurant, hospital and shop bills in India — with the source, the date, and an honest note when things are unclear.</p>
+    <div data-reveal style="margin-top:50px">
+      <input class="search-big" id="q" placeholder="Search — try “service charge” or “MRP”" aria-label="Search questions">
+      <div class="topic-chips" id="chips">
+        <button class="on" data-t="all">All topics</button>
+        <button data-t="restaurant">Restaurants</button>
+        <button data-t="tax">Taxes on bills</button>
+        <button data-t="hospital">Hospital bills</button>
+        <button data-t="mrp">Packaged goods</button>
+        <button data-t="complaint">Complaints</button>
+      </div>
+    </div>
+
+    <div class="acc" id="qa">
+      <div class="acc-item" data-t="restaurant" data-reveal>
+        <button class="acc-q">Is a restaurant service charge mandatory?<span class="pm">+</span></button>
+        <div class="acc-a"><div><div class="inner">
+          <p>According to guidelines issued by the Central Consumer Protection Authority (CCPA) in July 2022, hotels and restaurants should not add a service charge to the bill automatically or by default, and should not collect it under any other name. Paying it is voluntary and at the consumer's discretion.</p>
+          <p>The guidelines also say service charge should not be added to the food bill with GST then charged on the total. These guidelines were challenged in court; check the latest position before relying on them.</p>
+          <div class="source-line"><span class="tag ok">Verified source</span><span>CCPA guideline · 04 Jul 2022</span><a href="https://consumeraffairs.nic.in" target="_blank" rel="noopener">consumeraffairs.nic.in</a></div>
+        </div></div></div>
+      </div>
+      <div class="acc-item" data-t="restaurant" data-reveal>
+        <button class="acc-q">Can I ask for the service charge to be removed?<span class="pm">+</span></button>
+        <div class="acc-a"><div><div class="inner">
+          <p>Yes — under the 2022 guidelines you may request its removal. Be polite and specific: point to the line on the bill and say you'd like to pay without it. If you were happy with the service, you're free to leave a tip instead.</p>
+          <p>If the restaurant refuses, note the time, the staff member's response, and keep the bill. You can then contact the National Consumer Helpline.</p>
+          <div class="source-line"><span class="tag ok">Verified source</span><span>CCPA guideline · 04 Jul 2022</span></div>
+        </div></div></div>
+      </div>
+      <div class="acc-item" data-t="restaurant" data-reveal>
+        <button class="acc-q">What is a “packaging charge” on a dine-in bill?<span class="pm">+</span></button>
+        <div class="acc-a"><div><div class="inner">
+          <p>Packaging charges usually relate to takeaway or delivery orders. On a dine-in bill, it's reasonable to ask what the charge covers. PayRight marks it as <b>Unexplained</b> — not as wrong — until there's a clear reason.</p>
+          <div class="source-line"><span class="tag need">No specific rule found</span><span>Guidance based on general fair-billing principles</span></div>
+        </div></div></div>
+      </div>
+      <div class="acc-item" data-t="tax" data-reveal>
+        <button class="acc-q">Why does my bill show both CGST and SGST?<span class="pm">+</span></button>
+        <div class="acc-a"><div><div class="inner">
+          <p>For a sale within the same state, GST is split equally between the Centre (CGST) and the State (SGST). So a 5% GST appears as 2.5% CGST + 2.5% SGST. That's one tax shown in two halves — not double taxation.</p>
+          <p>For inter-state supplies you'd normally see IGST instead. PayRight checks that the two halves are equal and calculated on the right amount.</p>
+          <div class="source-line"><span class="tag ok">Verified source</span><span>CBIC — GST basics</span><a href="https://cbic-gst.gov.in" target="_blank" rel="noopener">cbic-gst.gov.in</a></div>
+        </div></div></div>
+      </div>
+      <div class="acc-item" data-t="tax" data-reveal>
+        <button class="acc-q">What GST rate should a restaurant charge?<span class="pm">+</span></button>
+        <div class="acc-a"><div><div class="inner">
+          <p>Most standalone restaurants charge 5% GST. Restaurants in certain hotels may charge a different rate. Rates are changed by government notification from time to time, so PayRight stores which rule version was used for every audit.</p>
+          <div class="source-line"><span class="tag opt">May have changed</span><span>Check the latest CBIC rate notification</span></div>
+        </div></div></div>
+      </div>
+      <div class="acc-item" data-t="tax" data-reveal>
+        <button class="acc-q">Should GST be charged on the service charge?<span class="pm">+</span></button>
+        <div class="acc-a"><div><div class="inner">
+          <p>The 2022 CCPA guidelines say restaurants shouldn't add a service charge to the bill and then levy GST on the combined total. PayRight checks which amounts the tax was calculated on and shows you the working.</p>
+          <div class="source-line"><span class="tag ok">Verified source</span><span>CCPA guideline · 04 Jul 2022</span></div>
+        </div></div></div>
+      </div>
+      <div class="acc-item" data-t="hospital" data-reveal>
+        <button class="acc-q">Can I ask a hospital for an itemised bill?<span class="pm">+</span></button>
+        <div class="acc-a"><div><div class="inner">
+          <p>Yes. The Charter of Patients' Rights (prepared by the NHRC and shared by the Ministry of Health with states) includes the right to information on the rates charged and to an itemised bill. Lump sums like "miscellaneous" or "admin charges" are reasonable to question.</p>
+          <div class="source-line"><span class="tag ok">Verified source</span><span>Charter of Patients' Rights · NHRC / MoHFW</span><span class="tag opt">Adoption varies by state</span></div>
+        </div></div></div>
+      </div>
+      <div class="acc-item" data-t="hospital" data-reveal>
+        <button class="acc-q">Is GST charged on hospital treatment?<span class="pm">+</span></button>
+        <div class="acc-a"><div><div class="inner">
+          <p>Health care services by clinical establishments are generally exempt from GST. Some items can still attract GST — for example, non-ICU room rent above ₹5,000 per day (since July 2022), or medicines sold from a pharmacy. If a hospital bill shows GST, ask which items it applies to.</p>
+          <div class="source-line"><span class="tag ok">Verified source</span><span>Notification 12/2017-Central Tax (Rate), as amended</span><a href="https://cbic-gst.gov.in" target="_blank" rel="noopener">cbic-gst.gov.in</a></div>
+        </div></div></div>
+      </div>
+      <div class="acc-item" data-t="hospital" data-reveal>
+        <button class="acc-q">The room was billed for more days than I stayed. Is that allowed?<span class="pm">+</span></button>
+        <div class="acc-a"><div><div class="inner">
+          <p>Hospitals count days differently — some by night, some by calendar day or by a fixed check-out time. PayRight compares per-day charges with the admission and discharge dates printed on the bill and flags a mismatch for you to ask about. It's a question, not an accusation.</p>
+          <div class="source-line"><span class="tag need">Depends on hospital policy</span><span>Ask for the day-counting policy in writing</span></div>
+        </div></div></div>
+      </div>
+      <div class="acc-item" data-t="hospital" data-reveal>
+        <button class="acc-q">Can a hospital pharmacy charge more than MRP?<span class="pm">+</span></button>
+        <div class="acc-a"><div><div class="inner">
+          <p>Medicines are packaged goods with a printed MRP, and selling above MRP is generally not allowed under the Legal Metrology rules. PayRight checks every medicine line that shows an MRP.</p>
+          <div class="source-line"><span class="tag ok">Verified source</span><span>Legal Metrology (Packaged Commodities) Rules, 2011</span></div>
+        </div></div></div>
+      </div>
+      <div class="acc-item" data-t="mrp" data-reveal>
+        <button class="acc-q">Can a shop charge more than the MRP?<span class="pm">+</span></button>
+        <div class="acc-a"><div><div class="inner">
+          <p>For pre-packaged goods sold at retail, the Legal Metrology (Packaged Commodities) Rules, 2011 require the maximum retail price to be declared, and selling above it is generally not allowed.</p>
+          <p>Restaurants and hotels are a known exception for items served as part of the dining experience (e.g. bottled water at a table), following a 2017 Supreme Court ruling. The context matters.</p>
+          <div class="source-line"><span class="tag ok">Verified source</span><span>Legal Metrology (Packaged Commodities) Rules, 2011</span></div>
+        </div></div></div>
+      </div>
+      <div class="acc-item" data-t="complaint" data-reveal>
+        <button class="acc-q">How do I raise a consumer complaint?<span class="pm">+</span></button>
+        <div class="acc-a"><div><div class="inner">
+          <p>Start with the business — a clear, polite message often resolves things. If not, contact the National Consumer Helpline (NCH) by calling 1915 or online. For formal cases, consumer commissions accept complaints online through e-Daakhil.</p>
+          <p>PayRight helps you prepare the facts and evidence, but it never files complaints on your behalf.</p>
+          <div class="source-line"><span class="tag ok">Verified source</span><a href="https://consumerhelpline.gov.in" target="_blank" rel="noopener">consumerhelpline.gov.in</a><a href="https://edaakhil.nic.in" target="_blank" rel="noopener">edaakhil.nic.in</a></div>
+        </div></div></div>
+      </div>
+      <div class="acc-item" data-t="complaint" data-reveal>
+        <button class="acc-q">Do I need a lawyer to file at a consumer commission?<span class="pm">+</span></button>
+        <div class="acc-a"><div><div class="inner">
+          <p>Under the Consumer Protection Act, 2019, consumers can file and appear in person. For larger or complex disputes, legal advice can help. PayRight provides legal <i>information</i>, not individual legal advice.</p>
+          <div class="source-line"><span class="tag ok">Verified source</span><span>Consumer Protection Act, 2019</span></div>
+        </div></div></div>
+      </div>
+      <div class="acc-item" data-t="complaint" data-reveal>
+        <button class="acc-q">The restaurant refused to remove the charge. Now what?<span class="pm">+</span></button>
+        <div class="acc-a"><div><div class="inner">
+          <p>Pay if you need to, keep the bill, and write down what was said. Then raise it with the NCH. PayRight's complaint tracker keeps your bill, the audit and a timeline together so nothing gets lost.</p>
+          <div class="source-line"><span class="tag need">Depends on facts</span><span>Outcome depends on the specific case</span></div>
+        </div></div></div>
+      </div>
+    </div>
+    <p id="noRes" class="muted" style="display:none;padding:30px 0;font-size:20px">Nothing matches that yet. Try <a href="#" data-app="#ask" style="color:var(--accent);text-decoration:underline">asking PayRight in the app</a>.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:60px">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker" data-reveal>Before you leave the table</span>
+      <h2 class="display h-l split-words">Keep these <span class="ital">six</span> things.</h2>
+    </div>
+    <ol class="evidence-list">
+      <li data-reveal>The original printed bill — not just a payment SMS</li>
+      <li data-reveal style="--d:.08s">A clear photo of the bill, all edges visible</li>
+      <li data-reveal>The menu price or offer you were shown</li>
+      <li data-reveal style="--d:.08s">Your payment proof — UPI, card or cash receipt</li>
+      <li data-reveal>Date, time and branch of the visit</li>
+      <li data-reveal style="--d:.08s">A note of who you spoke to and what they said</li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker" data-reveal>Where to go</span>
+      <h2 class="display h-l split-words">Official channels.</h2>
+    </div>
+    <div class="helpline">
+      <div data-reveal><span class="muted">National Consumer Helpline</span><b>1915</b><a href="https://consumerhelpline.gov.in" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">consumerhelpline.gov.in ↗</a></div>
+      <div data-reveal style="--d:.1s"><span class="muted">File with a commission</span><b>e-Daakhil</b><a href="https://edaakhil.nic.in" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">edaakhil.nic.in ↗</a></div>
+      <div data-reveal style="--d:.2s"><span class="muted">Policy &amp; guidelines</span><b>CCPA</b><a href="https://consumeraffairs.nic.in" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">consumeraffairs.nic.in ↗</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="band" data-reveal="scale">
+      <div class="ring" data-speed=".08"></div>
+      <span class="kicker">An honest note</span>
+      <h2 class="display h-l">Information, not legal advice.</h2>
+      <p>Rules change and every case is different. We show where each answer comes from and when it was published. For decisions with real consequences, speak to a qualified professional.</p>
+      <div style="margin-top:30px"><a href="#" data-app="#ask" class="btn btn-primary">Ask a question in the app <span class="arr">→</span></a></div>
+    </div>
+  </div>
+</section>
+
+<footer id="foot"></footer>
+
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="assets/site.js"></script>
+<script>
+  // search + topic filter
+  (function () {
+    const q = document.getElementById("q");
+    const items = [...document.querySelectorAll("#qa .acc-item")];
+    let topic = "all";
+    function filter() {
+      const term = q.value.trim().toLowerCase();
+      let shown = 0;
+      items.forEach(it => {
+        const ok = (topic === "all" || it.dataset.t === topic) && (!term || it.textContent.toLowerCase().includes(term));
+        it.style.display = ok ? "" : "none";
+        if (ok) { shown++; it.classList.add("in"); }
+      });
+      document.getElementById("noRes").style.display = shown ? "none" : "block";
+    }
+    q.addEventListener("input", filter);
+    document.querySelectorAll("#chips button").forEach(b => b.onclick = () => {
+      document.querySelectorAll("#chips button").forEach(x => x.classList.remove("on"));
+      b.classList.add("on"); topic = b.dataset.t; filter();
+    });
+  })();
+</script>
+</body>
+</html>
